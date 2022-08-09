@@ -1,0 +1,94 @@
+
+$blue : #D3640B;
+$black : #333;
+$white : #fff;
+$gold : gold;
+$light-color : #666;
+$light-bg : #eee;
+$border : .2rem solid $black;
+$box-shadow : 0 .5rem 1rem rgba(0,0,0,.2);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap:2rem;
+}
+
+
+
+
+
+.feature{
+
+    padding: 5rem 0rem;
+    .section-header{
+        padding: 20px;
+    }
+
+    .box-container{
+      @include grid(33rem);
+  
+      .box{
+        border-radius: .5rem;
+        // border:$border;
+        padding:2rem;
+        box-shadow: $box-shadow;
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        background: $white;
+        
+        &:hover{
+  
+          .image{
+  
+            .main-img{
+              display: none;
+            }
+  
+            .hover-img{
+              display: inline-block;
+            }
+          }
+        }
+  
+        .image{
+  
+          img{
+            height: 15rem;
+            animation: fadeIn .2s linear;
+          }
+  
+          .hover-img{
+            display: none;
+          }
+        }
+  
+        .content{
+  
+          h3{
+            font-size: 2rem;
+            color:$black;
+          }
+  
+          .price{
+            padding-top: .5erm;
+            font-size: 2rem;
+            color:$blue;
+            padding-bottom: .7rem;
+  
+            span{
+              font-size: 1.5rem;
+              color:$light-color;
+              text-decoration: line-through;
+            }
+          }
+  
+          .stars i{
+            font-size: 1.5rem;
+            color:$gold;
+          }
+        }
+      }
+    }
+  }

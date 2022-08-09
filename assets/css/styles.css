@@ -1,0 +1,53 @@
+.feature {
+  padding: 5rem 0rem;
+}
+.feature .section-header {
+  padding: 20px;
+}
+.feature .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2rem;
+}
+.feature .box-container .box {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+}
+.feature .box-container .box:hover .image .main-img {
+  display: none;
+}
+.feature .box-container .box:hover .image .hover-img {
+  display: inline-block;
+}
+.feature .box-container .box .image img {
+  height: 15rem;
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
+}
+.feature .box-container .box .image .hover-img {
+  display: none;
+}
+.feature .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+.feature .box-container .box .content .price {
+  padding-top: 0.5erm;
+  font-size: 2rem;
+  color: #D3640B;
+  padding-bottom: 0.7rem;
+}
+.feature .box-container .box .content .price span {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: line-through;
+}
+.feature .box-container .box .content .stars i {
+  font-size: 1.5rem;
+  color: gold;
+}/*# sourceMappingURL=styles.css.map */
